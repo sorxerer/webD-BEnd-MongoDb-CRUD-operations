@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/users.css">
+    <style>
+        input{
+            width:96%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="headeing">EDIT MODE</h2>
+        <div class="userBox">
+          
+            <div class="user">
+        
+                <div class="image">
+                    <img src="<%= user.image%>">
+                </div>
+                <form action="/update/<%=user._id%>" method="post">
+                <h3 class="name"><input type="url" value="<%= user.image%>" name="image"></h3>
+                <h3 class="name"><input type="text" value="<%=user.name%>" name="name"></h3>
+                <p class="email"><input type="email" value= "<%=user.email%>" name="email"></p>
+                <h3 class="name"><input type="submit" value="Update" style="width: 30%; " class="submit-btn"></h3>
+                
+                </form>
+            </div>
+
+
+           
+    </div>
+
+</body>
+
+</html>
+<!-- https://images.pexels.com/photos/23483909/pexels-photo-23483909/free-photo-of-a-woman-sitting-in-the-grass-with-her-legs-crossed.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 -->

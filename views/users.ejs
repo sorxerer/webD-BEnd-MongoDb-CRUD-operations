@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/users.css">
+</head>
+
+<body>
+    <div class="container">
+        <a href="/">back to form</a>
+        <h2 class="headeing">All User</h2>
+        <div class="userBox">
+            <% if(users.length > 0) {%>
+                 <% users.forEach(function(user) { %>
+                    <div class="user">
+                
+                        <div class="image">
+                            <img src="<%= user.image%>">
+                        </div>
+        
+                        <h3 class="name"><%= user.name%></h3>
+                        <p class="email"><%= user.email%></p>
+                        <div class="delete-update">
+                            <a href="/edit/<%= user._id%>" class="update">Update user</a>
+                            <a href="/delete/<%= user._id%>" class="delete">Delete user</a>
+                        </div>
+                    </div>
+
+                 <% })%>
+            <%}else{%>
+                <div style="color: rgb(173, 173, 173);">no user</div>
+            <% } %>
+    </div>
+
+</body>
+
+</html>
+<!-- https://images.pexels.com/photos/23483909/pexels-photo-23483909/free-photo-of-a-woman-sitting-in-the-grass-with-her-legs-crossed.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 -->

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Form</title>
+    <link rel="stylesheet" href="stylesheets/form.css">
+</head>
+<body>
+
+<div class="form-container">
+    <a href="/read" style="text-decoration: none;">users</a>
+    <h2>Form</h2>
+    <form action="/create" method="POST">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        </div>
+        <div class="form-group">
+            <label for="image">Image URL:</label>
+            <input type="url" id="image" name="image" placeholder="Enter the URL of your image" required>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit" class="btn btn-submit">
+ 
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
